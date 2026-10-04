@@ -17,7 +17,7 @@ export async function recalculateTagCounts() {
       const tag=existing.get(name);
       if(tag)await db.tags.update(tag.id,stat);else await db.tags.add({id:crypto.randomUUID(),name,...stat});
     }
-    for(const tag of tags)if(!stats.has(tag.name))await db.tags.update(tag.id,{count:0});
+    for(const tag of tags)if(!stats.has(tag.name))await db.tags.update(tag.id,{count:0,lastUsedAt:''});
   });
 }
 
