@@ -23,14 +23,14 @@ export async function ensureSeedData() {
   const now = new Date().toISOString();
   await db.transaction('rw', [db.lines,db.goals,db.tags,db.templates], async () => {
     await db.lines.bulkAdd([
-      {id:'fitness',title:'健身',description:'保持训练节奏',cover:'/design-reference/02_fitness.png',order:1,archived:false},
-      {id:'cpa',title:'CPA 考试',description:'一次通过，给未来更多可能',cover:'/design-reference/03_cpa.png',order:2,archived:false},
-      {id:'english',title:'英语',description:'每天进步一点',cover:'/design-reference/01_home.png',order:3,archived:false}
+      {id:'fitness',title:'健身',description:'保持训练节奏',cover:'design-reference/02_fitness.png',order:1,archived:false},
+      {id:'cpa',title:'CPA 考试',description:'一次通过，给未来更多可能',cover:'design-reference/03_cpa.png',order:2,archived:false},
+      {id:'english',title:'英语',description:'每天进步一点',cover:'design-reference/01_home.png',order:3,archived:false}
     ]);
     await db.goals.bulkAdd([
-      {id:'g1',title:'健身',description:'更强壮，更有能量的自己',status:'focus',progress:68,domainId:'fitness',cover:'/design-reference/02_fitness.png',createdAt:now,updatedAt:now},
-      {id:'g2',title:'CPA 考试',description:'一次通过，给未来更多可能',status:'focus',progress:42,domainId:'cpa',cover:'/design-reference/03_cpa.png',createdAt:now,updatedAt:now},
-      {id:'g3',title:'英语',description:'可以流畅表达和阅读',status:'active',progress:72,domainId:'english',cover:'/design-reference/01_home.png',createdAt:now,updatedAt:now},
+      {id:'g1',title:'健身',description:'更强壮，更有能量的自己',status:'focus',progress:68,domainId:'fitness',cover:'design-reference/02_fitness.png',createdAt:now,updatedAt:now},
+      {id:'g2',title:'CPA 考试',description:'一次通过，给未来更多可能',status:'focus',progress:42,domainId:'cpa',cover:'design-reference/03_cpa.png',createdAt:now,updatedAt:now},
+      {id:'g3',title:'英语',description:'可以流畅表达和阅读',status:'active',progress:72,domainId:'english',cover:'design-reference/01_home.png',createdAt:now,updatedAt:now},
       {id:'g4',title:'阅读',description:'每年 30 本书',status:'active',progress:30,createdAt:now,updatedAt:now},
       {id:'g5',title:'旅行',description:'去更多想去的地方',status:'active',progress:20,createdAt:now,updatedAt:now}
     ]);

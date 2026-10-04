@@ -2,4 +2,12 @@ node_modules/
 dist/
 playwright-report/
 test-results/
+.pnpm-store/
+test-output/
+*.tsbuildinfo
+playwright.config.js
+playwright.config.d.ts
+vite.config.js
+vite.config.d.ts
+*.tar.gz
 .sites-runtime/

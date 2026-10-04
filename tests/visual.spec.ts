@@ -5,8 +5,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const pages:[string,string][]=[
-  ['01_home','/'],['02_fitness','/fitness'],['03_cpa','/cpa'],['04_knowledge','/knowledge'],['05_timeline','/timeline'],
-  ['06_quick_capture','/capture'],['07_goals','/goals'],['08_note_detail','/note/cpa'],['09_profile','/profile'],['10_templates','/templates'],['11_tags','/tags']
+  ['01_home','./#/'],['02_fitness','./#/fitness'],['03_cpa','./#/cpa'],['04_knowledge','./#/knowledge'],['05_timeline','./#/timeline'],
+  ['06_quick_capture','./#/capture'],['07_goals','./#/goals'],['08_note_detail','./#/note/cpa'],['09_profile','./#/profile'],['10_templates','./#/templates'],['11_tags','./#/tags']
 ];
 
 fs.mkdirSync('test-output',{recursive:true});

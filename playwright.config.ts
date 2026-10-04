@@ -4,7 +4,7 @@ export default defineConfig({
   testDir: './tests',
   timeout: 30_000,
   use: {
-    baseURL: 'http://127.0.0.1:4173',
+    baseURL: 'http://127.0.0.1:4173/mym-life-system/',
     viewport: { width: 393, height: 852 },
     deviceScaleFactor: 1,
     colorScheme: 'light',
@@ -15,7 +15,7 @@ export default defineConfig({
     }
   },
   webServer: {
-    command: 'npm run preview -- --port 4173',
+    command: 'node_modules\\.bin\\vite.cmd preview --host 127.0.0.1 --port 4173',
     port: 4173,
     reuseExistingServer: true
   },

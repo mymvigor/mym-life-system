@@ -11,8 +11,9 @@ import { db, ensureSeedData } from './data/db';
 import { saveMedia, saveThumbnail, videoThumbnail } from './data/opfs';
 import type { Goal, Media as MediaRecord, Template } from './types';
 
+const asset=(path:string)=>`${import.meta.env.BASE_URL}${path.replace(/^\//,'')}`;
 const refs:Record<string,string>={
-  home:'/design-reference/01_home.png',fitness:'/design-reference/02_fitness.png',cpa:'/design-reference/03_cpa.png',knowledge:'/design-reference/04_knowledge.png',timeline:'/design-reference/05_timeline.png',capture:'/design-reference/06_quick_capture.png',goals:'/design-reference/07_goals.png',note:'/design-reference/08_note_detail.png',profile:'/design-reference/09_profile.png',templates:'/design-reference/10_templates.png',tags:'/design-reference/11_tags.png'
+  home:asset('design-reference/01_home.png'),fitness:asset('design-reference/02_fitness.png'),cpa:asset('design-reference/03_cpa.png'),knowledge:asset('design-reference/04_knowledge.png'),timeline:asset('design-reference/05_timeline.png'),capture:asset('design-reference/06_quick_capture.png'),goals:asset('design-reference/07_goals.png'),note:asset('design-reference/08_note_detail.png'),profile:asset('design-reference/09_profile.png'),templates:asset('design-reference/10_templates.png'),tags:asset('design-reference/11_tags.png')
 };
 const screens:Record<string,string>={'/':'home','/fitness':'fitness','/cpa':'cpa','/knowledge':'knowledge','/timeline':'timeline','/capture':'capture','/goals':'goals','/profile':'profile','/templates':'templates','/tags':'tags'};
 
