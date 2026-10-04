@@ -26,5 +26,7 @@
   --font-hero: 34px;
   --bottom-nav-height: 72px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
+  --visual-height: 100dvh;
   --shadow: 0 8px 24px rgba(27, 61, 43, .06);
 }

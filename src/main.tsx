@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import App from './App';
+import { AppErrorBoundary } from './components/AppErrorBoundary';
 import './styles/tokens.css';
 import './styles/app.css';
 
@@ -11,6 +12,6 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <HashRouter><App /></HashRouter>
+    <AppErrorBoundary><HashRouter><App /></HashRouter></AppErrorBoundary>
   </React.StrictMode>,
 );

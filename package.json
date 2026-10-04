@@ -1,19 +1,23 @@
 {
   "name": "mym-life-system",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test:visual": "playwright test",
-    "test:visual:update": "playwright test --update-snapshots"
+    "test": "playwright test tests/offline-and-data.spec.ts tests/data-integrity.spec.ts tests/backup.spec.ts tests/console.spec.ts",
+    "visual:test": "playwright test tests/visual.spec.ts",
+    "offline:test": "playwright test tests/offline.spec.ts",
+    "test:visual": "playwright test tests/visual.spec.ts",
+    "test:visual:update": "playwright test tests/visual.spec.ts --update-snapshots"
   },
   "dependencies": {
     "@vite-pwa/assets-generator": "^1.0.0",
     "dexie": "^4.0.10",
     "dexie-react-hooks": "^1.1.7",
+    "jszip": "^3.10.2",
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

@@ -7,7 +7,7 @@ test('PWA shell reloads offline after first cache', async ({ page, context }) =>
   await page.waitForFunction(() => navigator.serviceWorker?.controller !== null);
   await context.setOffline(true);
   await page.reload({ waitUntil: 'domcontentloaded' });
-  await expect(page.getByText('当前重点')).toBeVisible();
+  await expect(page.getByRole('heading', { name: '当前重点', exact: true })).toBeVisible();
   await context.setOffline(false);
 });
 
